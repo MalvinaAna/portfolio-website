@@ -1,23 +1,23 @@
 :root {
   --background-color: white;
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --primary-button-background-color: #036;
-  --secondary-button-background-color: #e0b354;
+  --primary-color: #4f4b59;
+  --secondary-color: #efcbcd;
+  --primary-button-background-color: #9f97b2;
+  --secondary-button-background-color: #efcbcd;
   --primary-button-color: white;
-  --secondary-button-color: #2b2b2b;
+  --secondary-button-color: #4f4b59;
   --grid-background-color: lightgray;
   --primary-sun-animation-color: #edc655;
   --secondary-sun-animation-color: #fcffad;
   --tertiary-sun-animation-color: #f76414;
-  --a-visited-color: #05676e;
-  --a-active-color: #489c79;
+  --a-active-color: #6f697c;
   --body-font-family: 'Lato', sans-serif;
   --body-font-size: 16px;
   --h1-font-size: 30px;
   --body-font-weight: 400;
   --h1-font-weight: 700;
   --body-line-height: 1.6;
+  --text-center: center;
 }
 
 body {
@@ -39,16 +39,6 @@ h1 {
 
 a {
   color: var (--primary-color);
-}
-
-a:visited {
-  /* visited link */
-  color: var(--a-visited-color);
-}
-
-a:hover,
-a:focus {
-  /* No underllining when hovering over a link */
   text-decoration: none;
 }
 
@@ -80,6 +70,9 @@ button,
   transition: opacity 0.2;
 }
 
+a:hover,
+a:active,
+a:focus,
 button:hover,
 button:focus,
 .button:hover,
@@ -114,18 +107,25 @@ button:focus,
   border-radius: 50%;
 }
 
+.credit-link {
+  display: block;
+  text-align: var(--text-center);
+}
+
 .page-footer {
   clear: both;
   display: table-row;
   flex-direction: column;
-  text-align: center;
+  text-align: var(--text-center);
 }
 
 .profile,
 .about-me,
-.contact {
+.contact,
+.work {
   max-width: 700px;
   margin: 0 auto;
+  text-align: var(--text-center);
 }
 
 * {
@@ -169,10 +169,30 @@ button:focus,
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
+  text-align: var(--text-center);
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--primary-color);
+  border-collapse: collapse;
+  padding: auto;
+  text-align: var(--text-center);
+}
+
+.about-me-table {
+  margin: 0 auto;
 }
 
 .sun {
   animation: 8s color-change infinite alternate linear;
+}
+
+#contact-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes color-change {
