@@ -173,9 +173,54 @@ button:focus,
 
 /* start grid fallback */
 
-.grid_item {
-  display: inline-block;
-  width: 33%;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between boxes */
+}
+
+.grid__item {
+  flex: 1 1 30%; /* Makes items take up about 30% of row and same height */
+  box-sizing: border-box;
+  padding: 20px; /* Adds padding inside each box */
+  background-color: #f9f9f9; /* Optional: Add a background color to the boxes */
+  border: 1px solid #ddd; /* Optional: Adds a border */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid__item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.grid__item h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.grid__item p {
+  flex-grow: 1;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.grid__item a {
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.grid__item a:hover {
+  text-decoration: underline;
 }
 
 .about-me__item {
